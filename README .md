@@ -1,0 +1,1 @@
+Created a Ecommerce single page website for company Trendy shop using Html and Tailwind CSS
