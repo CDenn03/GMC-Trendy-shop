@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TrendyShop - Your one-stop online store for the latest fashion and accessories.">
+  <meta name="keywords" content="online store, fashion, accessories, shopping, TrendyShop">
+  <title>TrendyShop - Online Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-primary-bg text-primary-text">
+  <!-- Header with navigation -->
+  <header class="sticky top-0 z-50 bg-primary-bg shadow">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold">TrendyShop</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-accent">Home</a>
+        <a href="#products" class="hover:text-accent">Products</a>
+        <a href="#about" class="hover:text-accent">About</a>
+        <a href="#contact" class="hover:text-accent">Contact</a>
+      </div>
+      <button class="md:hidden focus:outline-none" id="menu-toggle">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-primary-bg shadow">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="#home" class="hover:text-accent">Home</a>
+        <a href="#products" class="hover:text-accent">Products</a>
+        <a href="#about" class="hover:text-accent">About</a>
+        <a href="#contact" class="hover:text-accent">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <section id="home" class="min-h-[500px] bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('./images/hero-bg.jpg'); background-color: rgba(0, 0, 0, 0.5); background-blend-mode: darken;">
+    <div class="text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">Discover the Latest Trends at TrendyShop</h1>
+      <p class="text-lg md:text-xl mb-6">Shop stylish clothing and accessories with unbeatable quality.</p>
+      <a href="#products" class="bg-primary-text text-white px-6 py-3 rounded-lg hover:bg-accent transition duration-300">Shop Now</a>
+    </div>
+  </section>
+
+
+
+  <!-- Script for mobile menu toggle -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+/* Custom color variables */
+:root {
+  --primary-text-color: #1D0E02;
+  --primary-bg-color: #FFF7EC;
+  --accent-color: #3b2a0a;
+}
+
+/* Global text and background colors */
+body {
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+}
+
+/* Text shadow for hero section */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* link styling */
+a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .min-h-\[500px\] {
+    min-height: 400px;
+  }
+
+  .text-4xl {
+    font-size: 2rem;
+  }
+
+  .text-lg {
+    font-size: 1rem;
+  }
+
+  .h-64 {
+    height: 180px;
+  }
+}
