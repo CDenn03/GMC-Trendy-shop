@@ -1,7 +1,8 @@
 /* Custom color variables */
 :root {
-  --primary-text-color: #1D0E02;
-  --primary-bg-color: #FFF7EC;
+  --primary-text-color: #751A2B;
+  --secondary-text-color: #F38B2A;
+  --primary-bg-color: #fcebed;
   --accent-color: #3b2a0a;
 }
 
@@ -16,14 +17,14 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* link styling */
+link styling
 a {
   color: var(--primary-text-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--accent-color);
+  transition: all 0.3s;
 }
 
 /* Responsive adjustments */

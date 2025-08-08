@@ -6,13 +6,13 @@
   <meta name="description" content="TrendyShop - Your one-stop online store for the latest fashion and accessories.">
   <meta name="keywords" content="online store, fashion, accessories, shopping, TrendyShop">
   <title>TrendyShop - Online Store</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-primary-bg text-primary-text">
   <!-- Header with navigation -->
-  <header class="sticky top-0 z-50 bg-primary-bg shadow">
+  <header class="sticky top-0 z-50 bg-(--primary-bg-color) shadow-lg">
     <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
       <a href="#" class="text-2xl font-bold">TrendyShop</a>
       <div class="hidden md:flex space-x-6">
@@ -36,12 +36,23 @@
     </div>
   </header>
 
-  <!-- Hero section -->
-  <section id="home" class="min-h-[500px] bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('./images/hero-bg.jpg'); background-color: rgba(0, 0, 0, 0.5); background-blend-mode: darken;">
-    <div class="text-center px-4">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">Discover the Latest Trends at TrendyShop</h1>
-      <p class="text-lg md:text-xl mb-6">Shop stylish clothing and accessories with unbeatable quality.</p>
-      <a href="#products" class="bg-primary-text text-white px-6 py-3 rounded-lg hover:bg-accent transition duration-300">Shop Now</a>
+  <!-- Hero Section with Background Image -->
+  <section id="home" class="relative h-[500px] md:h-[600px] bg-cover bg-center flex items-center">
+    <!-- Background Image with overlay -->
+    <div class="absolute inset-0 bg-(--primary-text-color) opacity-40 z-10"></div>
+    <div class="bg-[url('./images/hero.jpg')] absolute inset-0 bg-cover bg-center"></div>
+    
+    <!-- Hero Content -->
+    <div class="container mx-auto px-4 z-10 text-white">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Fashion for Every Occasion</h1>
+        <p class="text-xl mb-8">Discover the latest trends in clothing, accessories, and more at unbeatable prices.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#products" class="bg-white text-(--primary-text-color) hover:bg-(--primary-text-color) drop-shadow-lg hover:text-white px-6 py-3 rounded-lg text-center font-semibold transition duration-400">
+            Shop Now
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -49,10 +60,10 @@
   <section id="products" class="py-12">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="flex flex-wrap justify-center gap-6">
         <!-- Product 1 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition duration-300">
-          <img src="./images/product1.jpg" alt="Denim Jacket" class="h-64 object-cover">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-[calc(50%-1.5rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(25%-1.5rem)] flex flex-col transform hover:-translate-y-1 transition duration-300">
+          <img src="./images/products/Denim Jacket.jpg" alt="Denim Jacket" class="h-64 w-full object-cover">
           <div class="p-4 flex flex-col flex-1">
             <h3 class="text-xl font-semibold mb-2">Denim Jacket</h3>
             <p class="text-primary-text mb-2">$49.99</p>
@@ -61,8 +72,8 @@
           </div>
         </div>
         <!-- Product 2 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition duration-300">
-          <img src="./images/product2.jpg" alt="White Sneakers" class="h-64 object-cover">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-[calc(50%-1.5rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(25%-1.5rem)] flex flex-col transform hover:-translate-y-1 transition duration-300">
+          <img src="./images/products/White Sneakers.jpg" alt="White Sneakers" class="h-64 w-full object-cover">
           <div class="p-4 flex flex-col flex-1">
             <h3 class="text-xl font-semibold mb-2">White Sneakers</h3>
             <p class="text-primary-text mb-2">$69.99</p>
@@ -71,8 +82,8 @@
           </div>
         </div>
         <!-- Product 3 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition duration-300">
-          <img src="./images/product3.jpg" alt="Polarized Sunglasses" class="h-64 object-cover">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-[calc(50%-1.5rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(25%-1.5rem)] flex flex-col transform hover:-translate-y-1 transition duration-300">
+          <img src="./images/products/Polarized Sunglasses.jpg" alt="Polarized Sunglasses" class="h-64 w-full object-cover">
           <div class="p-4 flex flex-col flex-1">
             <h3 class="text-xl font-semibold mb-2">Polarized Sunglasses</h3>
             <p class="text-primary-text mb-2">$29.99</p>
@@ -81,8 +92,8 @@
           </div>
         </div>
         <!-- Product 4 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition duration-300">
-          <img src="./images/product4.jpg" alt="Leather Backpack" class="h-64 object-cover">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-[calc(50%-1.5rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(25%-1.5rem)] flex flex-col transform hover:-translate-y-1 transition duration-300">
+          <img src="./images/products/Leather Backpack.jpg" alt="Leather Backpack" class="h-64 w-full object-cover">
           <div class="p-4 flex flex-col flex-1">
             <h3 class="text-xl font-semibold mb-2">Leather Backpack</h3>
             <p class="text-primary-text mb-2">$89.99</p>
@@ -94,19 +105,58 @@
     </div>
   </section>
 
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <!-- Image Column -->
+        <div class="md:w-1/2">
+          <img src="./images/about.jpg" alt="About TrendyShop" class="rounded-lg shadow-xl w-full max-h-[500px] object-cover">
+        </div>
+        
+        <!-- Text Column -->
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold mb-6">About TrendyShop</h2>
+          <p class="text-lg mb-4">
+            Founded in 2020, TrendyShop is dedicated to bringing you the latest fashion trends at affordable prices. 
+            We believe everyone deserves to look their best without breaking the bank.
+          </p>
+          <p class="text-lg mb-6">
+            Our team of fashion experts carefully curates each collection to ensure quality, style, and value. 
+            From casual wear to statement pieces, we've got something for every occasion and personal style.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mt-1">
+                <i class="fas fa-check-circle text-accent text-xl"></i>
+              </div>
+              <p class="ml-3 text-gray-700">100% authentic products from trusted brands</p>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mt-1">
+                <i class="fas fa-check-circle text-accent text-xl"></i>
+              </div>
+              <p class="ml-3 text-gray-700">Fast and reliable shipping worldwide</p>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mt-1">
+                <i class="fas fa-check-circle text-accent text-xl"></i>
+              </div>
+              <p class="ml-3 text-gray-700">30-day hassle-free returns</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="bg-dark text-white py-6">
+  <footer class="bg-dark text-(--primary-text-color) py-6">
     <div class="container mx-auto px-4 text-center">
       <div class="flex justify-center space-x-6 mb-4">
-        <a href="https://x.com" class="text-white hover:text-primary-bg"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://facebook.com" class="text-white hover:text-primary-bg"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com" class="text-white hover:text-primary-bg"><i class="fab fa-instagram"></i></a>
-      </div>
-      <div class="flex justify-center space-x-6 mb-4">
-        <a href="#home" class="text-white hover:text-primary-bg">Home</a>
-        <a href="#products" class="text-white hover:text-primary-bg">Products</a>
-        <a href="#about" class="text-white hover:text-primary-bg">About</a>
-        <a href="#contact" class="text-white hover:text-primary-bg">Contact</a>
+        <a href="https://x.com" class="text-(--primary-text-color) hover:text-primary-bg"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://facebook.com" class="text-(--primary-text-color) hover:text-primary-bg"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" class="text-(--primary-text-color) hover:text-primary-bg"><i class="fab fa-instagram"></i></a>
       </div>
       <p>&copy; 2025 TrendyShop. All rights reserved.</p>
     </div>
